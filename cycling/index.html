@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cit-E Cycling</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body { background: #f0f4f8; font-family: 'Segoe UI', sans-serif; }
+        .hero {
+            background: linear-gradient(135deg, #1a237e 0%, #1565c0 60%, #0288d1 100%);
+            color: white;
+            padding: 80px 0 60px;
+            clip-path: ellipse(100% 85% at 50% 0%);
+            margin-bottom: 40px;
+        }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; letter-spacing: -1px; }
+        .hero p  { font-size: 1.1rem; opacity: .85; }
+        .card-link {
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,.10);
+            transition: transform .2s, box-shadow .2s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+        .card-link:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,.15); }
+        .icon-circle {
+            width: 60px; height: 60px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.6rem;
+            margin: 0 auto 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero text-center">
+    <div class="container">
+        <div class="mb-3" style="font-size:3.5rem;">&#128690;</div>
+        <h1>Cit-E Cycling</h1>
+        <p class="mb-0">Your community cycling event portal</p>
+    </div>
+</div>
+
+<main class="container pb-5">
+    <div class="row g-4 justify-content-center">
+
+        <div class="col-12 col-sm-6 col-md-5">
+            <a href="register_form.html" class="card card-link p-4 text-center d-block">
+                <div class="icon-circle bg-primary bg-opacity-10 text-primary">
+                    <i class="bi bi-person-plus-fill"></i>
+                </div>
+                <h5 class="fw-bold mb-1">Register Interest</h5>
+                <p class="text-muted small mb-0">Sign up for upcoming cycling events</p>
+            </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-5">
+            <a href="admin_login.html" class="card card-link p-4 text-center d-block">
+                <div class="icon-circle bg-success bg-opacity-10 text-success">
+                    <i class="bi bi-shield-lock-fill"></i>
+                </div>
+                <h5 class="fw-bold mb-1">Admin Login</h5>
+                <p class="text-muted small mb-0">Manage participants and clubs</p>
+            </a>
+        </div>
+
+    </div>
+</main>
+
+<footer class="text-center text-muted py-4 small">
+    &copy; 2026 Cit-E Cycling &mdash; All rights reserved
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

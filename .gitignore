@@ -1,0 +1,24 @@
+# Local environment and database credentials
+.env
+.env.*
+config/database.php
+config/db.php
+
+# XAMPP and local uploads
+xampp/
+uploads/
+
+# Dependencies
+node_modules/
+vendor/
+
+# Editor settings
+.vscode/
+.idea/
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

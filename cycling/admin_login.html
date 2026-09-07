@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login – Cit-E Cycling</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a237e 0%, #1565c0 60%, #0288d1 100%);
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .login-card {
+            width: 100%; max-width: 420px;
+            border: none; border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,.3);
+        }
+        .login-card .card-body { padding: 2.5rem; }
+        .brand-icon { font-size: 2.8rem; }
+        .form-control, .input-group .form-control {
+            border-radius: 10px !important;
+            padding: 0.65rem 1rem;
+            border: 1.5px solid #dee2e6;
+            transition: border-color .2s, box-shadow .2s;
+        }
+        .form-control:focus { border-color: #1565c0; box-shadow: 0 0 0 3px rgba(21,101,192,.15); }
+        .input-group .btn-toggle {
+            border-radius: 0 10px 10px 0 !important;
+            border: 1.5px solid #dee2e6;
+            border-left: none;
+            background: #f8f9fa;
+            color: #6c757d;
+        }
+        .input-group .btn-toggle:hover { background: #e9ecef; color: #333; }
+        .btn-login {
+            background: linear-gradient(90deg, #1565c0, #0288d1);
+            border: none; border-radius: 10px;
+            padding: .7rem; font-size: 1rem; font-weight: 600;
+            letter-spacing: .5px;
+            transition: opacity .2s, transform .1s;
+        }
+        .btn-login:hover { opacity: .9; transform: translateY(-1px); }
+        .back-link { color: rgba(255,255,255,.8); text-decoration: none; font-size: .9rem; }
+        .back-link:hover { color: white; }
+    </style>
+</head>
+<body>
+
+<div class="text-center px-3" style="width:100%;">
+
+    <div class="mb-3">
+        <a href="index.html" class="back-link"><i class="bi bi-arrow-left"></i> Back to Home</a>
+    </div>
+
+    <div class="card login-card mx-auto">
+        <div class="card-body">
+            <div class="brand-icon mb-2">&#128690;</div>
+            <h1 class="h4 fw-bold mb-1">Admin Login</h1>
+            <p class="text-muted small mb-4">Sign in to the Cit-E Cycling admin area</p>
+
+            <form action="login.php" method="POST" novalidate>
+
+                <div class="mb-3 text-start">
+                    <label for="username" class="form-label fw-semibold small">Username</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0" style="border-radius:10px 0 0 10px;border:1.5px solid #dee2e6;">
+                            <i class="bi bi-person text-muted"></i>
+                        </span>
+                        <input type="text" class="form-control border-start-0" id="username"
+                               name="username" placeholder="Enter username" required
+                               style="border-radius:0 10px 10px 0!important;">
+                    </div>
+                </div>
+
+                <div class="mb-4 text-start">
+                    <label for="password" class="form-label fw-semibold small">Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0" style="border-radius:10px 0 0 10px;border:1.5px solid #dee2e6;">
+                            <i class="bi bi-lock text-muted"></i>
+                        </span>
+                        <input type="password" class="form-control border-start-0 border-end-0"
+                               id="password" name="password" placeholder="Enter password" required
+                               style="border-radius:0!important;">
+                        <button class="btn btn-toggle" type="button" onclick="togglePassword()"
+                                id="toggleBtn" title="Show/hide password">
+                            <i class="bi bi-eye" id="eyeIcon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-login btn-primary w-100 text-white">
+                    <i class="bi bi-box-arrow-in-right me-1"></i> Login
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function togglePassword() {
+    const pwd = document.getElementById('password');
+    const icon = document.getElementById('eyeIcon');
+    if (pwd.type === 'password') {
+        pwd.type = 'text';
+        icon.className = 'bi bi-eye-slash';
+    } else {
+        pwd.type = 'password';
+        icon.className = 'bi bi-eye';
+    }
+}
+</script>
+</body>
+</html>
