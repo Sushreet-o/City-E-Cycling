@@ -81,6 +81,20 @@ Password: password123
 - Password hashing and role-based access control
 - Online deployment
 
+## Screenshots
+
+### Homepage
+
+![Cit-E Cycling homepage](screenshots/homepage.png)
+
+### Admin Dashboard
+
+![Cit-E Cycling admin dashboard](screenshots/admin-dashboard.png)
+
+### Leaderboard
+
+![Cit-E Cycling leaderboard](screenshots/leaderboard.png)
+
 ## Author
 
 Sushreet
