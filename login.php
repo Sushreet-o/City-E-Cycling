@@ -66,8 +66,11 @@ session_start();
                         }
                     }
                     catch(PDOException $e) {
-                        echo "<div class='alert alert-danger'><i class='bi bi-database-x me-2'></i>Database issue: " . $e->getMessage() . "</div>";
-                    }
+    echo "<div class='alert alert-danger'>
+            <i class='bi bi-database-x me-2'></i>
+            The login service is temporarily unavailable. Please try again later.
+          </div>";
+}
                 } else {
                     echo "<div class='alert alert-warning'><i class='bi bi-exclamation-triangle me-2'></i>Direct access not allowed.</div>";
                     echo "<a href='admin_login.html' class='btn btn-outline-secondary w-100'>Back to Login</a>";

@@ -170,11 +170,11 @@ if (!isset($_SESSION["admin_logged_in"])) { header("Location: admin_login.html")
             }
         }
         catch(PDOException $e) {
-            echo "<div class='alert alert-danger d-flex align-items-center gap-2'>
-                    <i class='bi bi-database-x fs-5'></i>
-                    <div><strong>Database Error:</strong> " . $e->getMessage() . "</div>
-                  </div>";
-        }
+    echo "<div class='alert alert-danger d-flex align-items-center gap-2'>
+            <i class='bi bi-database-x fs-5'></i>
+            <div>The search service is temporarily unavailable. Please try again later.</div>
+          </div>";
+}
     ?>
 </main>
 
