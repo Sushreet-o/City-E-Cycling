@@ -72,6 +72,21 @@ Password: password123
 
 > These credentials are included only for the assignment demo database. A production system should use password hashing and role-based access control.
 
+## Manual Testing Checklist
+
+Before publishing changes, test the following features locally with Apache and MySQL running in XAMPP:
+
+- [ ] Submit the registration form with valid details and accepted terms.
+- [ ] Submit the registration form with an invalid email and confirm that a friendly error appears.
+- [ ] Log in with the admin demo account.
+- [ ] Try opening an admin page while logged out and confirm that the visitor is redirected to the admin login page.
+- [ ] Confirm that dashboard statistics show participant, club, distance, and power data.
+- [ ] Search for a participant by first name or surname.
+- [ ] Search for a club and confirm that its performance summary is displayed.
+- [ ] Update a participant's power output and distance, then confirm the changes appear in the participant list and leaderboard.
+- [ ] Open the delete confirmation page, test Cancel, then confirm deletion only happens after clicking Delete Permanently.
+- [ ] Open the public leaderboard and confirm that individual cyclists and clubs are ranked correctly.
+
 ## Future Improvements
 
 - Event scheduling, locations, and time-slot management
